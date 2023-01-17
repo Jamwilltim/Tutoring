@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: #e9e9e9;
+  background-color: #030d1a;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  color: #e9e9e9;
+  display: grid;
+  grid-template-columns: clamp(130px, 8vw, 150px) auto clamp(200px, 23vw, 500px);
+  grid-template-rows: auto 25vh;
+  gap: 0;
+  overflow: hidden;
+}
+
+.intro-fade-in {
+  opacity: 0;
+}
+
+.left-sidebar {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  border-right: 1px solid rgb(75, 75, 75);
+}
+.left-sidebar .icon-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 10%;
+}
+.left-sidebar .icon-wrapper #invert-mode {
+  font-size: 30px;
+}
+.left-sidebar .icon-wrapper #invert-mode:hover {
+  cursor: pointer;
+  font-size: 35px;
+}
+.left-sidebar .icon-wrapper ion-icon {
+  transition: all 0.1s ease-in;
+}
+.left-sidebar .icon-wrapper a {
+  text-decoration: none;
+  color: #e9e9e9;
+}
+.left-sidebar .icons {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  justify-self: flex-end;
+  height: 20%;
+  width: clamp(130px, 8vw, 150px);
+  font-size: 30px;
+}
+.left-sidebar .icons .icon-wrapper {
+  position: relative;
+  height: 33%;
+}
+.left-sidebar .icons ion-icon:hover {
+  cursor: pointer;
+  font-size: 35px;
+}
+.left-sidebar .logo-wrapper {
+  height: 100%;
+  width: clamp(130px, 8vw, 150px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-sidebar #logo {
+  width: auto;
+  height: 35%;
+}
+
+.main-section {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.main-section .main-section-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.main-section .main-section-container .divider {
+  width: 30%;
+  height: 3px;
+  background-color: #cc922f;
+  margin-bottom: 2%;
+}
+.main-section .main-section-container .main-section-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  z-index: 0;
+}
+.main-section .main-section-container #about-us-main {
+  background-image: url("/img/st-peters.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-section .main-section-container #contact-us-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Mono", monospace;
+}
+.main-section .main-section-container #contact-us-main .contact-title {
+  padding-bottom: 2%;
+  font-size: 6rem;
+  color: #e9e9e9;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+}
+.main-section .main-section-container #contact-us-main .light {
+  font-weight: 200;
+  font-size: 3rem;
+}
+.main-section .main-section-container #contact-us-main form {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* Chrome, Safari, Edge, Opera */
+}
+.main-section .main-section-container #contact-us-main form input {
+  font-size: 15px;
+  font-family: "Roboto Mono", monospace;
+}
+.main-section .main-section-container #contact-us-main form .input-container {
+  overflow: hidden;
+  position: relative;
+  width: 45%;
+}
+.main-section .main-section-container #contact-us-main form input::-webkit-outer-spin-button,
+.main-section .main-section-container #contact-us-main form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.main-section .main-section-container #contact-us-main form .label-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid rgb(75, 75, 75);
+}
+.main-section .main-section-container #contact-us-main form .input {
+  background: transparent;
+  width: 45%;
+  height: 100%;
+  color: #e9e9e9;
+  padding-top: 15px;
+  border: none;
+  outline: none;
+}
+.main-section .main-section-container #contact-us-main form #text-area {
+  width: 100%;
+}
+.main-section .main-section-container #contact-us-main form #text-area .input {
+  padding-top: 25px;
+  width: 100%;
+  word-wrap: break-word;
+}
+.main-section .main-section-container #contact-us-main form .label-name::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: -1px;
+  border-bottom: 3px solid #cc922f;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+}
+.main-section .main-section-container #contact-us-main form .content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.5s ease;
+}
+.main-section .main-section-container #contact-us-main form input:focus + .label-name .content-name,
+.main-section .main-section-container #contact-us-main form input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-size: 15px;
+  color: #cc922f;
+}
+.main-section .main-section-container #contact-us-main form input:focus + .label-name::after,
+.main-section .main-section-container #contact-us-main form input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+.main-section .main-section-container #contact-us-main .top-line {
+  width: 100%;
+  position: relative;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-section .main-section-container #contact-us-main .middle-line {
+  width: 100%;
+  position: relative;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-section .main-section-container #contact-us-main .bottom-line {
+  width: 100%;
+  position: relative;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-section .main-section-container #our-tutors-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-section .main-section-container #our-tutors-main .section {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-section .main-section-container #our-tutors-main .card {
+  background: linear-gradient(to right, #cc922f 4px, transparent 4px) 0 0, linear-gradient(to right, #cc922f 4px, transparent 4px) 0 100%, linear-gradient(to left, #cc922f 4px, transparent 4px) 100% 0, linear-gradient(to left, #cc922f 4px, transparent 4px) 100% 100%, linear-gradient(to bottom, #cc922f 4px, transparent 4px) 0 0, linear-gradient(to bottom, #cc922f 4px, transparent 4px) 100% 0, linear-gradient(to top, #cc922f 4px, transparent 4px) 0 100%, linear-gradient(to top, #cc922f 4px, transparent 4px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 45%;
+  height: 80%;
+  overflow: hidden;
+}
+.main-section .main-section-container #our-tutors-main .card .img {
+  overflow: hidden;
+  width: 40%;
+  height: 100%;
+}
+.main-section .main-section-container #our-tutors-main .card .img img {
+  width: auto;
+  height: 100%;
+}
+.main-section .main-section-container #our-tutors-main .card .info {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-section .main-section-container #our-tutors-main .card .info .info-text {
+  font-family: "Roboto Mono", monospace;
+  font-size: medium;
+}
+
+.description-section {
+  border-top: 1px solid rgb(75, 75, 75);
+  overflow: hidden;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.description-section .description-section-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.description-section .description-section-container .description-section-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  font-family: "Roboto Mono", monospace;
+  color: #e9e9e9;
+  font-size: 0.95rem;
+  padding: 30px;
+}
+.description-section .description-section-container #contact-us-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.description-section .description-section-container #contact-us-description .details-section {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.description-section .description-section-container #contact-us-description .details-section ion-icon {
+  color: #cc922f;
+  font-size: 40px;
+  padding-right: 10px;
+}
+.description-section .description-section-container #contact-us-description .details-section contact-description-item {
+  font-size: 25px;
+}
+.description-section .description-section-container #contact-us-description .details-section div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  border-left: 1px solid rgb(75, 75, 75);
+  z-index: 1;
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.navigation .indicator {
+  position: relative;
+}
+.navigation .indicator #indicator {
+  position: absolute;
+  transition: all 0.2s ease-in;
+  opacity: 0.8;
+  top: 10%;
+  transform: translate(-7%);
+}
+.navigation #menu {
+  padding-left: 7%;
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto Mono", monospace;
+  font-size: 2.6em;
+  font-weight: 200;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.navigation #menu #menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-around;
+  height: 70%;
+}
+.navigation #menu #menu-items .menu-item {
+  transition: all 0.2s ease-in;
+  opacity: 0.3;
+}
+.navigation #menu #menu-items .menu-item:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.navigation #menu #menu-items .active {
+  opacity: 1;
+}
+
+.arrows {
+  border-top: 1px solid rgb(75, 75, 75);
+  border-left: 1px solid rgb(75, 75, 75);
+  z-index: 1;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  display: inline-flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+.arrows .ionicon path {
+  transition: all 0.2s ease-in;
+}
+.arrows .right-arrow:hover {
+  background-color: rgba(88, 88, 88, 0.2352941176);
+}
+.arrows .right-arrow:hover .ionicon path {
+  stroke-width: 8;
+}
+.arrows .left-arrow:hover {
+  background-color: rgba(88, 88, 88, 0.2352941176);
+}
+.arrows .left-arrow:hover .ionicon path {
+  stroke-width: 8;
+}
+.arrows .left-arrow,
+.arrows .right-arrow {
+  transition: all 0.2s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.arrows .left-arrow {
+  border-right: 1px solid rgb(75, 75, 75);
+}
+
+.typewriter {
+  z-index: 3;
+}
+.typewriter h1 {
+  font-size: 6rem;
+  color: #e9e9e9;
+  font-family: "Roboto Mono", monospace;
+  overflow: hidden;
+  border-right: 5px solid #e9e9e9;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+}
+.typewriter .light {
+  font-weight: 200;
+  font-size: 3rem;
+}/*# sourceMappingURL=style.css.map */

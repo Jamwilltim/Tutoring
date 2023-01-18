@@ -84,3 +84,27 @@ function compareIds() {
 		}
 	}
 }
+
+function sendEmail() {
+	let body =
+		"Name: " +
+		$("#first-name").value +
+		" " +
+		$("#last-name").value +
+		"<br> Email: " +
+		$("#email").value +
+		"<br> Telephone: " +
+		$("#tel").value +
+		"<br> Message: " +
+		$("#text-area").value;
+
+	Email.send({
+		Host: "smtp.gmail.com",
+		Username: "spam.jamesharvey@gmail.com",
+		Password: "hauxley01",
+		To: "james.harvey@h2consulting.co.uk",
+		From: document.getElementById("email").value,
+		Subject: "New Enquiry",
+		Body: body,
+	}).then((message) => alert(message));
+}

@@ -124,41 +124,46 @@
 					<div id="contact-us-main" class="main-section-item">
 						<h1 class="contact-title">C<span class="light">ontact </span>U<span class="light">s</span></h1>
 						<div class="divider"></div>
-						<form action="" method="POST" class="form" id="contact-form">
+						<form action="https://formsubmit.co/james.harvey@h2consulting.co.uk" method="POST">
+							<input type="hidden" name="_captcha" value="false" />
+							<!-- <input type="hidden" name="_next" value="/thanks.html" /> -->
 							<div class="top-line">
-								<div id="first-name" class="input-container">
-									<input name="firstname" class="input" type="text" autocomplete="off" required />
+								<div class="input-container">
+									<input id="first-name" name="firstname" class="input" type="text" autocomplete="off" required />
 									<label for="firstname" class="label-name">
 										<span class="content-name">First Name</span>
 									</label>
 								</div>
-								<div id="last-name" class="input-container">
-									<input name="lastname" class="input" type="text" autocomplete="off" required />
+								<div class="input-container">
+									<input id="last-name" name="lastname" class="input" type="text" autocomplete="off" required />
 									<label for="lastname" class="label-name">
 										<span class="content-name">Last Name</span>
 									</label>
 								</div>
 							</div>
 							<div class="middle-line">
-								<div id="email" class="input-container">
-									<input name="email" class="input" type="email" autocomplete="off" required />
+								<div class="input-container">
+									<input id="email" name="email" class="input" type="email" autocomplete="off" required />
 									<label for="email" class="label-name">
 										<span class="content-name">Email</span>
 									</label>
 								</div>
-								<div id="tel" class="input-container">
-									<input name="telephone" class="input" type="number" autocomplete="off" required />
+								<div class="input-container">
+									<input id="tel" name="telephone" class="input" type="number" autocomplete="off" required />
 									<label for="telephone" class="label-name">
 										<span class="content-name">Telephone</span>
 									</label>
 								</div>
 							</div>
 							<div class="bottom-line">
-								<div id="text-area" class="input-container">
-									<input name="text-area" class="input" type="text" autocomplete="off" required />
+								<div class="input-container">
+									<input id="text-area" name="text-area" class="input" type="text" autocomplete="off" required />
 									<label for="text-area" class="label-name">
 										<span class="content-name">Input Enquiry</span>
 									</label>
+								</div>
+								<div class="submit-button">
+									<button type="submit">Submit</button>
 								</div>
 							</div>
 						</form>

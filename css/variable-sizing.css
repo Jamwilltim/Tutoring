@@ -1,0 +1,252 @@
+@media (min-width: 1350px) {
+  .description-section-item p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1320px) {
+  main {
+    display: none;
+  }
+  .active-mobile {
+    background-color: rgba(136, 136, 136, 0.0823529412);
+  }
+  .mobile {
+    font-family: "Roboto Mono", monospace;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7fr 1fr;
+  }
+  .mobile .nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+  }
+  .mobile .nav .mobile-nav {
+    outline: 1px solid rgb(75, 75, 75);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  .mobile .nav .mobile-nav ion-icon {
+    font-size: 20px;
+  }
+  .mobile .nav .mobile-nav:hover {
+    cursor: pointer;
+    font-size: larger;
+  }
+  .mobile .mobile-section-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  .mobile .mobile-section-container .main-section-item-mobile {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    z-index: 0;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto Mono", monospace;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile .contact-title {
+    padding-bottom: 2%;
+    font-size: 6rem;
+    color: #e9e9e9;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile .light {
+    font-weight: 200;
+    font-size: 3rem;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile form {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* Chrome, Safari, Edge, Opera */
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile form input {
+    font-size: 15px;
+    font-family: "Roboto Mono", monospace;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile form .input-container {
+    overflow: hidden;
+    position: relative;
+    width: 45%;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile form input::-webkit-outer-spin-button,
+.mobile .mobile-section-container #contact-us-main-mobile form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile form .label-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid rgb(75, 75, 75);
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile form .input {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    color: #e9e9e9;
+    padding-top: 15px;
+    border: none;
+    outline: none;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile form #text-area {
+    width: 100%;
+    padding-top: 25px;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile form .label-name::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    border-bottom: 3px solid #cc922f;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile form .content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.5s ease;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile form input:focus + .label-name .content-name,
+.mobile .mobile-section-container #contact-us-main-mobile form input:valid + .label-name .content-name {
+    transform: translateY(-150%);
+    font-size: 15px;
+    color: #cc922f;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile form input:focus + .label-name::after,
+.mobile .mobile-section-container #contact-us-main-mobile form input:valid + .label-name::after {
+    transform: translateX(0%);
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile form .submit-button {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile form .submit-button button {
+    border: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 23px;
+    cursor: pointer;
+    background: linear-gradient(to right, #cc922f 4px, transparent 4px) 0 0, linear-gradient(to right, #cc922f 4px, transparent 4px) 0 100%, linear-gradient(to left, #cc922f 4px, transparent 4px) 100% 0, linear-gradient(to left, #cc922f 4px, transparent 4px) 100% 100%, linear-gradient(to bottom, #cc922f 4px, transparent 4px) 0 0, linear-gradient(to bottom, #cc922f 4px, transparent 4px) 100% 0, linear-gradient(to top, #cc922f 4px, transparent 4px) 0 100%, linear-gradient(to top, #cc922f 4px, transparent 4px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    color: #e9e9e9;
+    padding: 5% 20%;
+    transition: all 1s ease;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile form .submit-button button:hover {
+    background: linear-gradient(to right, #cc922f 4px, transparent 4px) 0 0, linear-gradient(to right, #cc922f 4px, transparent 4px) 0 100%, linear-gradient(to left, #cc922f 4px, transparent 4px) 100% 0, linear-gradient(to left, #cc922f 4px, transparent 4px) 100% 100%, linear-gradient(to bottom, #cc922f 4px, transparent 4px) 0 0, linear-gradient(to bottom, #cc922f 4px, transparent 4px) 100% 0, linear-gradient(to top, #cc922f 4px, transparent 4px) 0 100%, linear-gradient(to top, #cc922f 4px, transparent 4px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile .top-line {
+    width: 100%;
+    position: relative;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile .middle-line {
+    width: 100%;
+    position: relative;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile .bottom-line {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mobile .mobile-section-container #our-tutors-main-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile .mobile-section-container #our-tutors-main-mobile .section {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobile .mobile-section-container #our-tutors-main-mobile .card {
+    background: linear-gradient(to right, #cc922f 4px, transparent 4px) 0 0, linear-gradient(to right, #cc922f 4px, transparent 4px) 0 100%, linear-gradient(to left, #cc922f 4px, transparent 4px) 100% 0, linear-gradient(to left, #cc922f 4px, transparent 4px) 100% 100%, linear-gradient(to bottom, #cc922f 4px, transparent 4px) 0 0, linear-gradient(to bottom, #cc922f 4px, transparent 4px) 100% 0, linear-gradient(to top, #cc922f 4px, transparent 4px) 0 100%, linear-gradient(to top, #cc922f 4px, transparent 4px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45%;
+    height: 60%;
+    overflow: hidden;
+  }
+  .mobile .mobile-section-container #our-tutors-main-mobile .card .img {
+    overflow: hidden;
+    width: 40%;
+    height: 100%;
+  }
+  .mobile .mobile-section-container #our-tutors-main-mobile .card .img img {
+    width: auto;
+    height: 100%;
+  }
+  .mobile .mobile-section-container #our-tutors-main-mobile .card .info {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .mobile .mobile-section-container #our-tutors-main-mobile .card .info .info-text {
+    font-family: "Roboto Mono", monospace;
+    font-size: medium;
+  }
+}
+@media (max-width: 794px) {
+  .mobile #home-main-mobile .title {
+    display: grid;
+    place-items: center;
+  }
+  .mobile #home-main-mobile .typewriter {
+    display: grid;
+    place-items: center;
+    width: 65%;
+  }
+  .mobile #home-main-mobile .typewriter h1.typewriter-text {
+    overflow: hidden;
+    white-space: normal;
+  }
+}/*# sourceMappingURL=variable-sizing.css.map */

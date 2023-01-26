@@ -24,10 +24,6 @@ main {
   overflow: hidden;
 }
 
-.intro-fade-in {
-  opacity: 0;
-}
-
 .left-sidebar {
   grid-column: 1/2;
   grid-row: 1/3;
@@ -101,16 +97,48 @@ main {
 .main-section .main-section-container .divider {
   width: 30%;
   height: 3px;
-  background-color: #cc922f;
+  background-color: #1e3957;
   margin-bottom: 2%;
 }
 .main-section .main-section-container .main-section-item {
   position: absolute;
   width: 100%;
   height: 100%;
-  display: grid;
-  place-items: center;
   z-index: 0;
+}
+.main-section .main-section-container #home-main {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+.main-section .main-section-container #home-main .logo-main {
+  width: 75%;
+}
+.main-section .main-section-container #home-main .slogan span {
+  font-family: "Roboto Mono", monospace;
+  font-style: italic;
+  font-size: 25px;
+}
+.main-section .main-section-container #about-us-main {
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 0.8fr;
+  grid-template-rows: 1fr 1fr;
+  font-family: "Roboto Mono", monospace;
+}
+.main-section .main-section-container #about-us-main .text-22 {
+  font-size: 15px;
+}
+.main-section .main-section-container #about-us-main .text-23 {
+  font-size: 15px;
+}
+.main-section .main-section-container #about-us-main .subjects ul {
+  list-style: none;
+}
+.main-section .main-section-container #about-us-main .subjects ul li {
+  padding: 10px;
 }
 .main-section .main-section-container #faq-main {
   background-image: url("/img/st-peters.jpg");

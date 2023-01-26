@@ -1,553 +1,855 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="author" content="James Harvey" />
-		<meta name="keywords" content="tutoring, online tutoring, maths tutoring, science tutoring, English tutoring" />
-		<meta name="description" content="Get student to student online tutoring in maths, science, English, and more." />
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/variable-sizing.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-		<link href="https://fonts.googleapis.com/css2?family=Alexandria&family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap" rel="stylesheet" />
-		<link rel="icon" type="image/x-icon" href="img/dark-favicon.ico" />
-		<title>Student Squared</title>
-	</head>
-	<body>
-		<main class="main">
-			<div class="grid-item left-sidebar intro-fade-in">
-				<div class="logo-wrapper">
-					<svg
-						id="logo"
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-						viewBox="0 0 250 1100"
-						shape-rendering="geometricPrecision"
-						text-rendering="geometricPrecision"
-					>
-						<g transform="matrix(0-1.077385 1 0-451.724029 1735.854075)">
-							<text
-								dx="0"
-								dy="0"
-								font-family='"e54Ny8Me0IQ1:::Roboto Mono"'
-								font-size="200"
-								font-weight="400"
-								transform="translate(606.277452 654.991618)"
-								fill="#c6c6c6"
-								stroke-width="0"
-							>
-								<tspan y="0" font-weight="400" stroke-width="0"><![CDATA[ S ]]></tspan>
-							</text>
-							<text
-								dx="0"
-								dy="0"
-								font-family='"e54Ny8Me0IQ1:::Roboto Mono"'
-								font-size="75"
-								font-weight="400"
-								letter-spacing="70"
-								transform="translate(829.073761 568.968983)"
-								fill="#c6c6c6"
-								stroke-width="0"
-							>
-								<tspan y="0" font-weight="400" stroke-width="0"><![CDATA[ STUDENT ]]></tspan>
-							</text>
-							<text
-								dx="0"
-								dy="0"
-								font-family='"e54Ny8Me0IQ1:::Roboto Mono"'
-								font-size="75"
-								font-weight="400"
-								letter-spacing="70"
-								transform="matrix(.993731 0 0 1 830.707676 653.612741)"
-								fill="#c6c6c6"
-								stroke-width="0"
-							>
-								<tspan y="0" font-weight="400" stroke-width="0"><![CDATA[ SQUARED ]]></tspan>
-							</text>
-							<line
-								x1="-0.905281"
-								y1="-97.544007"
-								x2="0.905281"
-								y2="97.544007"
-								transform="translate(783.996648 583.658844)"
-								fill="none"
-								stroke="#c6c6c6"
-								stroke-width="3"
-							/>
-							<text
-								dx="0"
-								dy="0"
-								font-family='"e54Ny8Me0IQ1:::Roboto Mono"'
-								font-size="50"
-								font-weight="400"
-								transform="matrix(.861384 0 0 1 729.077978 527.419857)"
-								fill="#c6c6c6"
-								stroke-width="0"
-							>
-								<tspan y="0" font-weight="400" stroke-width="0"><![CDATA[ 2 ]]></tspan>
-								<tspan x="0" y="100" font-weight="400" stroke-width="0"><![CDATA[ ]]></tspan>
-							</text>
-						</g>
-						<style>
-							<![CDATA[
-														@font-face {font-family: 'e54Ny8Me0IQ1:::Roboto Mono';font-style: normal;font-weight: 400;src: url(data:font/ttf;charset=utf-8;base64,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) format('truetype');}
-													]]>
-						</style>
-					</svg>
-				</div>
-				<div class="icon-wrapper"><ion-icon id="invert-mode" name="invert-mode-outline"></ion-icon></div>
-				<div class="icons">
-					<div class="icon-wrapper" id="linkedin">
-						<a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
-					</div>
-					<div class="icon-wrapper" id="instagram">
-						<a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-					</div>
-					<div class="icon-wrapper" id="facebook">
-						<a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-					</div>
-				</div>
-			</div>
-			<div class="grid-item main-section">
-				<div class="main-section-container">
-					<div id="home-main" class="main-section-item">
-						<div class="title">
-							<div class="typewriter">
-								<h1 class="typewriter-text">S<span class="light">tudent </span>S<span class="light">quared</span></h1>
-							</div>
-						</div>
-					</div>
-					<div id="faq-main" class="main-section-item">FAQ</div>
-					<div id="contact-us-main" class="main-section-item">
-						<h1 class="contact-title">C<span class="light">ontact </span>U<span class="light">s</span></h1>
-						<div class="divider"></div>
-						<form action="https://formsubmit.co/james.harvey@h2consulting.co.uk" method="POST">
-							<input type="hidden" name="_captcha" value="false" />
-							<!-- <input type="hidden" name="_next" value="/thanks.html" /> -->
-							<div class="top-line">
-								<div class="input-container">
-									<input id="first-name" name="firstname" class="input" type="text" autocomplete="off" required />
-									<label for="firstname" class="label-name">
-										<span class="content-name">First Name</span>
-									</label>
-								</div>
-								<div class="input-container">
-									<input id="last-name" name="lastname" class="input" type="text" autocomplete="off" required />
-									<label for="lastname" class="label-name">
-										<span class="content-name">Last Name</span>
-									</label>
-								</div>
-							</div>
-							<div class="middle-line">
-								<div class="input-container">
-									<input id="email" name="email" class="input" type="email" autocomplete="off" required />
-									<label for="email" class="label-name">
-										<span class="content-name">Email</span>
-									</label>
-								</div>
-								<div class="input-container">
-									<input id="tel" name="telephone" class="input" type="number" autocomplete="off" required />
-									<label for="telephone" class="label-name">
-										<span class="content-name">Telephone</span>
-									</label>
-								</div>
-							</div>
-							<div class="bottom-line">
-								<div class="input-container">
-									<input id="text-area" name="text-area" class="input" type="text" autocomplete="off" required />
-									<label for="text-area" class="label-name">
-										<span class="content-name">Input Enquiry</span>
-									</label>
-								</div>
-								<div class="submit-button">
-									<button type="submit">Submit</button>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div id="our-tutors-main" class="main-section-item">
-						<div class="section">
-							<div class="card">
-								<div class="img">
-									<img src="/img/profile-1.jpg" alt="" />
-								</div>
-								<div class="info">
-									<div class="info-text">
-										<h2>Name:</h2>
-										<span> John Doe</span>
-									</div>
-									<div class="info-text">
-										<h2>University:</h2>
-										<span> Manchester</span>
-									</div>
-									<div class="info-text">
-										<h2>Subjects:</h2>
-										<span> English, History</span>
-									</div>
-									<div class="info-text">
-										<h2>Grades:</h2>
-										<span> A* A* A*</span>
-									</div>
-								</div>
-							</div>
-							<div class="card">
-								<div class="img">
-									<img src="/img/profile-2.png" alt="" />
-								</div>
-								<div class="info">
-									<div class="info-text">
-										<h2>Name:</h2>
-										<span> John Doe</span>
-									</div>
-									<div class="info-text">
-										<h2>University:</h2>
-										<span> Manchester</span>
-									</div>
-									<div class="info-text">
-										<h2>Subjects:</h2>
-										<span> English, History</span>
-									</div>
-									<div class="info-text">
-										<h2>Grades:</h2>
-										<span> A* A* A*</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="section">
-							<div class="card">
-								<div class="img">
-									<img src="/img/profile-3.png" alt="" />
-								</div>
-								<div class="info">
-									<div class="info-text">
-										<h2>Name:</h2>
-										<span> John Doe</span>
-									</div>
-									<div class="info-text">
-										<h2>University:</h2>
-										<span> Manchester</span>
-									</div>
-									<div class="info-text">
-										<h2>Subjects:</h2>
-										<span> English, History</span>
-									</div>
-									<div class="info-text">
-										<h2>Grades:</h2>
-										<span> A* A* A*</span>
-									</div>
-								</div>
-							</div>
-							<div class="card">
-								<div class="img">
-									<img src="/img/profile-4.jpg" alt="" />
-								</div>
-								<div class="info">
-									<div class="info-text">
-										<h2>Name:</h2>
-										<span> John Doe</span>
-									</div>
-									<div class="info-text">
-										<h2>University:</h2>
-										<span> Manchester</span>
-									</div>
-									<div class="info-text">
-										<h2>Subjects:</h2>
-										<span> English, History</span>
-									</div>
-									<div class="info-text">
-										<h2>Grades:</h2>
-										<span> A* A* A*</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="grid-item description-section intro-fade-in">
-				<div class="description-section-container">
-					<div id="home-description" class="description-section-item">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aspernatur commodi saepe numquam laborum est libero,
-							quaerat corrupti possimus ducimus impedit rem veniam culpa aliquam quos nam labore nemo temporibus eligendi incidunt magni
-							hic? Dolor, maiores ut. Vel tempora aliquam impedit eaque reiciendis illum officia quo non at deleniti quod nam, amet enim
-							saepe maxime cum provident hic fugit placeat a doloremque earum recusandae! Ullam, et fugiat ratione quasi neque
-							praesentium esse? Atque aliquid voluptatem labore natus tempora sint voluptatibus possimus voluptate porro laudantium fuga
-							aut, nostrum dicta suscipit fugit. Ut quia fuga earum non, quod corrupti tempore porro ducimus! Non, maiores quis! Eos,
-							accusantium velit.
-						</p>
-					</div>
-					<div id="faq-description" class="description-section-item">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aspernatur commodi saepe numquam laborum est libero,
-							quaerat corrupti possimus ducimus impedit rem veniam culpa aliquam quos nam labore nemo temporibus eligendi incidunt magni
-							hic? Dolor, maiores ut. Vel tempora aliquam impedit eaque reiciendis illum officia quo non at deleniti quod nam, amet enim
-							saepe maxime cum provident hic fugit placeat a doloremque earum recusandae! Ullam, et fugiat ratione quasi neque
-							praesentium esse? Atque aliquid voluptatem labore natus tempora sint voluptatibus possimus voluptate porro laudantium fuga
-							aut, nostrum dicta suscipit fugit. Ut quia fuga earum non, quod corrupti tempore porro ducimus! Non, maiores quis! Eos,
-							accusantium velit. Nihil asperiores, quam nostrum blanditiis illum dolorem debitis magni facere voluptate id voluptatibus
-							atque unde iste totam harum molestias officia eligendi assumenda soluta, natus eos repellendus laudantium? Reprehenderit
-							doloribus necessitatibus consectetur magnam. Beatae dicta voluptas tenetur laudantium perspiciatis minima quo numquam sed
-							voluptatem eaque?
-						</p>
-					</div>
-					<div id="contact-us-description" class="description-section-item">
-						<div class="details-section">
-							<div id="phone">
-								<ion-icon name="call-outline"></ion-icon><span class="contact-description-item">+44 7801561171</span>
-							</div>
-							<div id="email">
-								<ion-icon name="mail-sharp"></ion-icon><span class="contact-description-item">whrussel@gmail.com</span>
-							</div>
-							<div id="address">
-								<ion-icon name="location-sharp"></ion-icon
-								><span class="contact-description-item">4 Townend Court<br />Great Ouseburn<br />YO26 9RD</span>
-							</div>
-						</div>
-					</div>
-					<div id="our-tutors-description" class="description-section-item">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aspernatur commodi saepe numquam laborum est libero,
-							quaerat corrupti possimus ducimus impedit rem veniam culpa aliquam quos nam labore nemo temporibus eligendi incidunt magni
-							hic? Dolor, maiores ut. Vel tempora aliquam impedit eaque reiciendis illum officia quo non at deleniti quod nam, amet enim
-							saepe maxime cum provident hic fugit placeat a doloremque earum recusandae! Ullam, et fugiat ratione quasi neque
-							praesentium esse? Atque aliquid voluptatem labore natus tempora sint voluptatibus possimus voluptate porro laudantium fuga
-							aut, nostrum dicta suscipit fugit. Ut quia fuga earum non, quod corrupti tempore porro ducimus! Non, maiores quis! Eos,
-							accusantium velit. Nihil asperiores, quam nostrum blanditiis illum dolorem debitis magni facere voluptate id voluptatibus
-							atque unde iste totam harum molestias officia eligendi assumenda soluta, natus eos repellendus laudantium? Reprehenderit
-							doloribus necessitatibus consectetur magnam. Beatae dicta voluptas tenetur laudantium perspiciatis minima quo numquam sed
-							voluptatem eaque?
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="grid-item navigation intro-fade-in">
-				<nav id="menu">
-					<div id="menu-items">
-						<span id="home-button" class="menu-item active">Home</span>
-						<span id="faq-button" class="menu-item">FAQ</span>
-						<span id="contact-us-button" class="menu-item">Contact Us</span>
-						<span id="our-tutors-button" class="menu-item">Our Tutors</span>
-					</div>
-				</nav>
-			</div>
-			<div class="grid-item arrows intro-fade-in">
-				<div class="left-arrow">
-					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-						<path
-							fill="none"
-							stroke="currentColor"
-							stroke-linecap="butt"
-							stroke-miterlimit="10"
-							stroke-width="3"
-							d="M328 112L184 256l144 144"
-						/>
-					</svg>
-				</div>
-				<div class="right-arrow">
-					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-						<path
-							fill="none"
-							stroke="currentColor"
-							stroke-linecap="butt"
-							stroke-miterlimit="10"
-							stroke-width="3"
-							d="M184 112l144 144-144 144"
-						/>
-					</svg>
-				</div>
-			</div>
-		</main>
-		<div class="mobile">
-			<div class="main-sections-mobile">
-				<div class="mobile-section-container">
-					<div id="home-main-mobile" class="main-section-item-mobile">
-						<div class="title">
-							<div class="typewriter">
-								<h1 class="typewriter-text">S<span class="light">tudent </span>S<span class="light">quared</span></h1>
-							</div>
-						</div>
-					</div>
-					<div id="faq-main-mobile" class="main-section-item-mobile">FAQ</div>
-					<div id="contact-us-main-mobile" class="main-section-item-mobile">
-						<h1 class="contact-title">C<span class="light">ontact </span>U<span class="light">s</span></h1>
-						<div class="divider"></div>
-						<form action="https://formsubmit.co/james.harvey@h2consulting.co.uk" method="POST">
-							<input type="hidden" name="_captcha" value="false" />
-							<!-- <input type="hidden" name="_next" value="/thanks.html" /> -->
-							<div class="top-line">
-								<div class="input-container">
-									<input id="first-name" name="firstname" class="input" type="text" autocomplete="off" required />
-									<label for="firstname" class="label-name">
-										<span class="content-name">First Name</span>
-									</label>
-								</div>
-								<div class="input-container">
-									<input id="last-name" name="lastname" class="input" type="text" autocomplete="off" required />
-									<label for="lastname" class="label-name">
-										<span class="content-name">Last Name</span>
-									</label>
-								</div>
-							</div>
-							<div class="middle-line">
-								<div class="input-container">
-									<input id="email" name="email" class="input" type="email" autocomplete="off" required />
-									<label for="email" class="label-name">
-										<span class="content-name">Email</span>
-									</label>
-								</div>
-								<div class="input-container">
-									<input id="tel" name="telephone" class="input" type="number" autocomplete="off" required />
-									<label for="telephone" class="label-name">
-										<span class="content-name">Telephone</span>
-									</label>
-								</div>
-							</div>
-							<div class="bottom-line">
-								<div class="input-container">
-									<input id="text-area" name="text-area" class="input" type="text" autocomplete="off" required />
-									<label for="text-area" class="label-name">
-										<span class="content-name">Input Enquiry</span>
-									</label>
-								</div>
-								<div class="submit-button">
-									<button type="submit">Submit</button>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div id="our-tutors-main-mobile" class="main-section-item-mobile">
-						<div class="section">
-							<div class="card">
-								<div class="img">
-									<img src="/img/profile-1.jpg" alt="" />
-								</div>
-								<div class="info">
-									<div class="info-text">
-										<h2>Name:</h2>
-										<span> John Doe</span>
-									</div>
-									<div class="info-text">
-										<h2>University:</h2>
-										<span> Manchester</span>
-									</div>
-									<div class="info-text">
-										<h2>Subjects:</h2>
-										<span> English, History</span>
-									</div>
-									<div class="info-text">
-										<h2>Grades:</h2>
-										<span> A* A* A*</span>
-									</div>
-								</div>
-							</div>
-							<div class="card">
-								<div class="img">
-									<img src="/img/profile-2.png" alt="" />
-								</div>
-								<div class="info">
-									<div class="info-text">
-										<h2>Name:</h2>
-										<span> John Doe</span>
-									</div>
-									<div class="info-text">
-										<h2>University:</h2>
-										<span> Manchester</span>
-									</div>
-									<div class="info-text">
-										<h2>Subjects:</h2>
-										<span> English, History</span>
-									</div>
-									<div class="info-text">
-										<h2>Grades:</h2>
-										<span> A* A* A*</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="section">
-							<div class="card">
-								<div class="img">
-									<img src="/img/profile-3.png" alt="" />
-								</div>
-								<div class="info">
-									<div class="info-text">
-										<h2>Name:</h2>
-										<span> John Doe</span>
-									</div>
-									<div class="info-text">
-										<h2>University:</h2>
-										<span> Manchester</span>
-									</div>
-									<div class="info-text">
-										<h2>Subjects:</h2>
-										<span> English, History</span>
-									</div>
-									<div class="info-text">
-										<h2>Grades:</h2>
-										<span> A* A* A*</span>
-									</div>
-								</div>
-							</div>
-							<div class="card">
-								<div class="img">
-									<img src="/img/profile-4.jpg" alt="" />
-								</div>
-								<div class="info">
-									<div class="info-text">
-										<h2>Name:</h2>
-										<span> John Doe</span>
-									</div>
-									<div class="info-text">
-										<h2>University:</h2>
-										<span> Manchester</span>
-									</div>
-									<div class="info-text">
-										<h2>Subjects:</h2>
-										<span> English, History</span>
-									</div>
-									<div class="info-text">
-										<h2>Grades:</h2>
-										<span> A* A* A*</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="nav intro-fade-in">
-				<div class="home-mobile-nav mobile-nav active-mobile" id="home-button-mobile">
-					<ion-icon name="home-sharp"></ion-icon><span>Home</span>
-				</div>
-				<div class="faq-mobile-nav mobile-nav" id="faq-button-mobile"><ion-icon name="help-circle"></ion-icon><span>FAQ</span></div>
-				<div class="contact-us-mobile-nav mobile-nav" id="contact-us-button-mobile">
-					<ion-icon name="call-sharp"></ion-icon><span>Contact Us</span>
-				</div>
-				<div class="our-tutors-mobile-nav mobile-nav" id="our-tutors-button-mobile">
-					<ion-icon name="person-sharp"></ion-icon><span>Our Tutors</span>
-				</div>
-			</div>
-		</div>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
-			integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
-			integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
-		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-		<script src="js/app.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="James Harvey" />
+    <meta
+      name="keywords"
+      content="tutoring, online tutoring, maths tutoring, science tutoring, English tutoring"
+    />
+    <meta
+      name="description"
+      content="Get student to student online tutoring in maths, science, English, and more."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/variable-sizing.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alexandria&family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="img/dark-favicon.ico" />
+    <title>Student Squared</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="grid-item left-sidebar intro-fade-in">
+        <div class="logo-wrapper">
+          <svg
+            id="logo"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 250 1100"
+            shape-rendering="geometricPrecision"
+            text-rendering="geometricPrecision"
+          >
+            <g transform="matrix(0-1.077385 1 0-451.724029 1735.854075)">
+              <text
+                dx="0"
+                dy="0"
+                font-family='"e54Ny8Me0IQ1:::Roboto Mono"'
+                font-size="200"
+                font-weight="400"
+                transform="translate(606.277452 654.991618)"
+                fill="#c6c6c6"
+                stroke-width="0"
+              >
+                <tspan y="0" font-weight="400" stroke-width="0">
+                  <![CDATA[ S ]]>
+                </tspan>
+              </text>
+              <text
+                dx="0"
+                dy="0"
+                font-family='"e54Ny8Me0IQ1:::Roboto Mono"'
+                font-size="75"
+                font-weight="400"
+                letter-spacing="70"
+                transform="translate(829.073761 568.968983)"
+                fill="#c6c6c6"
+                stroke-width="0"
+              >
+                <tspan y="0" font-weight="400" stroke-width="0">
+                  <![CDATA[ STUDENT ]]>
+                </tspan>
+              </text>
+              <text
+                dx="0"
+                dy="0"
+                font-family='"e54Ny8Me0IQ1:::Roboto Mono"'
+                font-size="75"
+                font-weight="400"
+                letter-spacing="70"
+                transform="matrix(.993731 0 0 1 830.707676 653.612741)"
+                fill="#c6c6c6"
+                stroke-width="0"
+              >
+                <tspan y="0" font-weight="400" stroke-width="0">
+                  <![CDATA[ SQUARED ]]>
+                </tspan>
+              </text>
+              <line
+                x1="-0.905281"
+                y1="-97.544007"
+                x2="0.905281"
+                y2="97.544007"
+                transform="translate(783.996648 583.658844)"
+                fill="none"
+                stroke="#c6c6c6"
+                stroke-width="3"
+              />
+              <text
+                dx="0"
+                dy="0"
+                font-family='"e54Ny8Me0IQ1:::Roboto Mono"'
+                font-size="50"
+                font-weight="400"
+                transform="matrix(.861384 0 0 1 729.077978 527.419857)"
+                fill="#c6c6c6"
+                stroke-width="0"
+              >
+                <tspan y="0" font-weight="400" stroke-width="0">
+                  <![CDATA[ 2 ]]>
+                </tspan>
+                <tspan x="0" y="100" font-weight="400" stroke-width="0">
+                  <![CDATA[ ]]>
+                </tspan>
+              </text>
+            </g>
+            <style>
+              <![CDATA[
+              							@font-face {font-family: 'e54Ny8Me0IQ1:::Roboto Mono';font-style: normal;font-weight: 400;src: url(data:font/ttf;charset=utf-8;base64,AAEAAAAOAIAAAwBgR1NVQpMNggIAAAGYAAAANE9TLzKXt8F0AAACqAAAAGBTVEFU53DMLgAAAgQAAABIY21hcAEHAS8AAAJMAAAAXGdhc3AAAAAQAAAA9AAAAAhnbHlmdIPvQAAABYwAAASEaGVhZAE1nA4AAAHMAAAANmhoZWEKsQEqAAABdAAAACRobXR4B00CZgAAAPwAAAAabG9jYQZPBV0AAAEYAAAAGm1heHAAKwE6AAABNAAAACBuYW1lONRe+QAAAwgAAAKEcG9zdP9tAGUAAAFUAAAAIHByZXBoBoyFAAAA7AAAAAe4Af+FsASNAAABAAH//wAPBM0AAAAAAFEAmwC2AI8AXgC1AHYATACLAFUAAAAAAAAAAAAcAGMAfACUAQ0BSgG5AcwB/wJCAAAAAQAAAAwAsQAWAIcABQABAAAAAAAAAAAAAAAAAAMAAQADAAAAAAAA/2oAZAAAAAEAAAAAAAAAAAAAAAAAAAAAAAEAAAhi/dUAAATN/AX+hgZHAAEAAAAAAAAAAAAAAAAAAAABAAEAAAAKADIAMgAEREZMVAAeY3lybAAaZ3JlawAabGF0bgAaAAAAAAAEAAAAAP//AAAAAAABAAAAAwAAr6v1Al8PPPUACwgAAAAAAMTwES4AAAAA2tg/q/wF/dUGRwhiAAAACQACAAAAAAAAAAEAAQAIAAIAAAAUAAIAAAAkAAJ3Z2h0AQAAAGl0YWwBCwABAAQAFAADAAAAAgEOAZAAAAK8AAAAAwABAAIBEQAAAAAAAQAAAAAAAgAAAAMAAAAUAAMAAQAAABQABABIAAAADgAIAAIABgAgADIAQQBFAE4AVf//AAAAIAAyAEEARABOAFH////h/9n/wf+//7f/tQABAAAAAAAAAAAAAAAAAAAABATNAZAABQAABZoFMwAAAR8FmgUzAAAD0QBmAgAAAAAAAAkAAAAAAADgAAL/EAAgWwAAACAAAAAAR09PRwBAAA3//Qhi/dUAAAhiAisgAAGfTwEAAAQ6BbAAAAAgAAEAAAAMAJYAAwABBAkAAAC0AToAAwABBAkAAQAWASQAAwABBAkAAgAOARYAAwABBAkAAwA6ANwAAwABBAkABAAmALYAAwABBAkABQAaAJwAAwABBAkABgAkAHgAAwABBAkADgBUACQAAwABBAkBAAAMABgAAwABBAkBCwAMAAwAAwABBAkBDgAOARYAAwABBAkBEQAMAAAATgBvAHIAbQBhAGwASQB0AGEAbABpAGMAVwBlAGkAZwBoAHQAaAB0AHQAcAA6AC8ALwB3AHcAdwAuAGEAcABhAGMAaABlAC4AbwByAGcALwBsAGkAYwBlAG4AcwBlAHMALwBMAEkAQwBFAE4AUwBFAC0AMgAuADAAUgBvAGIAbwB0AG8ATQBvAG4AbwAtAFIAZQBnAHUAbABhAHIAVgBlAHIAcwBpAG8AbgAgADMALgAwADAAMABSAG8AYgBvAHQAbwAgAE0AbwBuAG8AIABSAGUAZwB1AGwAYQByADMALgAwADAAMAA7AEcATwBPAEcAOwBSAG8AYgBvAHQAbwBNAG8AbgBvAC0AUgBlAGcAdQBsAGEAcgBSAGUAZwB1AGwAYQByAFIAbwBiAG8AdABvACAATQBvAG4AbwBDAG8AcAB5AHIAaQBnAGgAdAAgADIAMAAxADUAIABUAGgAZQAgAFIAbwBiAG8AdABvACAATQBvAG4AbwAgAFAAcgBvAGoAZQBjAHQAIABBAHUAdABoAG8AcgBzACAAKABoAHQAdABwAHMAOgAvAC8AZwBpAHQAaAB1AGIALgBjAG8AbQAvAGcAbwBvAGcAbABlAGYAbwBuAHQAcwAvAHIAbwBiAG8AdABvAG0AbwBuAG8AKQACAFEAAASQBbAABwAKAAABEzMBIwEzEzcTEwNlc7j+Mpv+Krl1MsPAAXn+hwWw+lABeaECeP2IAAIAmwAABHAFsAAVACsAADMhNjY3NjY3NjY1NSYmJyYmJyYmJyEXMxYWFxYWFxYWFxUGBgcGBgcGBgcjmwFRabVIRG4kIyUBJyUpiVlAl1X+r7yVRXQvQlsbFRUBARQUF082M4NQlQEwLSt6S0isYGtksEpXhSkeIQGYAR0aI3FGNn1EbUN7NUFpJCMmAQABALYAAAQ0BbAACwAAATUhESE1IREhNSERA8/9oAK8/IsDfv07AqGdAdSe+lCdAgQAAAEAjwAABD4FsAAJAAAhESMDASMRMxMBBD67A/3LvLsDAjUFsPvCBD76UARA+8AAAAIAXv8KBIwFxAAoAE4AAAE1JiYnJiYnJiYjIgYHBgYHBgYHFRYWFxYWFxYWMzI2NwU3JzY2NzY2JxUGBgcGBgcGBiMiJicmJicmJjU1NDY3NjY3NjYzMhYXFhYXFhYEbgEaGhtTOTqVXV2VOTpSGxsaAQEaGxtUOjmUXSRDHwEgf/s6UxsaGrcBCw4PMCUlZ0VEZyUlMQ8PDQ0PDzElJWZERWclJTEPDgsCl4BQpUxMhTExOTkxMoVMTKRQgFCjTEyFMTE5CQn0edExhUxMpNOCN3c6OmgnKC8vKChoOjp3NoI2dzo5aCgnLy4nKGg5OncAAgC1AAAEcgWwABQAIwAAAQEzNwE2Njc2NjU0JicmJichETMRNREzFhYXFhYVFAYHBgYHApABHsMB/ss8ZCQkKU1DRLRm/lW480NxKSkuMCkqbj4CUv2uDAJuGkowMHZHbqM2NjYC+lACUpgCLgEkIyRpRkJlIyMlAQABAHb/7ARpBcQASQAAARQGBwYGIyImJyYmJyMWFhcWFjMyNjc2NjU0JicmJicmJicmJic0Njc2NjMyFhcWFhczJiYnJiYjIgYHBgYVFBYXFhYXFhYXFhYDqDQpKWk2RHMsLDgJvQNNQkrJaFeuRUVXUUJDolExby8wPgEvKCdlNUJpJiYuCL4CUkREsF9WqkNDU1NCQZ9NNXMwMD0BcDxXHB0bJSUkaURemTlCRjExMJJiYZQzN0cZDygeHlc/OlgeHh4pJSVnP2SiOTk/NTMzlF5eizMyRxkRKh8gXAABAEwAAASEBbAABwAAATUhFSERMxEEhPvIAcK0BRKenvruBRIAAAEAi//sBEIFsAAdAAABIwMGBgcGBiMiJicmJicDIwMWFhcWFjMyNjc2NjUEQLMDAiYkJWxHR20kJScBBLACAUY+Pq5qaK4/P0gFsPwmQXguLzc4Li54QQPa/CZms0JDTE1DQrJmAAEAVQAABCsFxAAqAAAhNSEBNjY3NjY1NCYnJiYjIgYHBgYVMzQ2NzY2MzIWFxYWFRQGBwYGBwEVBCv9JQGHN2MmJSw9OTmlZ3CvPD1AuiMkI2tJPF8iISMWGhpWQP4jlwGoPHk+Pn9BV5Q2Nj1IPT2jXERuJyYqKSMjXzYsUy4vbkf97oU=) format('truetype');}
+              						]]>
+            </style>
+          </svg>
+        </div>
+        <div class="icon-wrapper">
+          <ion-icon id="invert-mode" name="invert-mode-outline"></ion-icon>
+        </div>
+        <div class="icons">
+          <div class="icon-wrapper" id="linkedin">
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </div>
+          <div class="icon-wrapper" id="instagram">
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+          </div>
+          <div class="icon-wrapper" id="facebook">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item main-section">
+        <div class="main-section-container">
+          <div id="home-main" class="main-section-item">
+            <div class="logo-main">
+              <svg
+                id="e78gCa5XqQS1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 1100 250"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+              >
+                <g transform="matrix(1.077385 0 0 1-633.940335-458.537845)">
+                  <text
+                    dx="0"
+                    dy="0"
+                    font-family='"e78gCa5XqQS1:::Roboto Mono"'
+                    font-size="200"
+                    font-weight="400"
+                    transform="translate(606.277452 654.991618)"
+                    fill="#c6c6c6"
+                    stroke-width="0"
+                  >
+                    <tspan y="0" font-weight="400" stroke-width="0">
+                      <![CDATA[ S ]]>
+                    </tspan>
+                  </text>
+                  <text
+                    dx="0"
+                    dy="0"
+                    font-family='"e78gCa5XqQS1:::Roboto Mono"'
+                    font-size="75"
+                    font-weight="400"
+                    letter-spacing="70"
+                    transform="translate(829.073761 568.968983)"
+                    fill="#c6c6c6"
+                    stroke-width="0"
+                  >
+                    <tspan y="0" font-weight="400" stroke-width="0">
+                      <![CDATA[ STUDENT ]]>
+                    </tspan>
+                  </text>
+                  <text
+                    dx="0"
+                    dy="0"
+                    font-family='"e78gCa5XqQS1:::Roboto Mono"'
+                    font-size="75"
+                    font-weight="400"
+                    letter-spacing="70"
+                    transform="matrix(.993731 0 0 1 830.707676 653.612741)"
+                    fill="#c6c6c6"
+                    stroke-width="0"
+                  >
+                    <tspan y="0" font-weight="400" stroke-width="0">
+                      <![CDATA[ SQUARED ]]>
+                    </tspan>
+                  </text>
+                  <line
+                    x1="-0.905281"
+                    y1="-97.544007"
+                    x2="0.905281"
+                    y2="97.544007"
+                    transform="translate(783.996648 583.658844)"
+                    fill="none"
+                    stroke="#c6c6c6"
+                    stroke-width="3"
+                  />
+                  <text
+                    dx="0"
+                    dy="0"
+                    font-family='"e78gCa5XqQS1:::Roboto Mono"'
+                    font-size="50"
+                    font-weight="400"
+                    transform="matrix(.861384 0 0 1 729.077978 527.419857)"
+                    fill="#c6c6c6"
+                    stroke-width="0"
+                  >
+                    <tspan y="0" font-weight="400" stroke-width="0">
+                      <![CDATA[ 2 ]]>
+                    </tspan>
+                    <tspan x="0" y="100" font-weight="400" stroke-width="0">
+                      <![CDATA[ ]]>
+                    </tspan>
+                  </text>
+                </g>
+                <style>
+                  <![CDATA[
+                  					@font-face {font-family: 'e78gCa5XqQS1:::Roboto Mono';font-style: normal;font-weight: 400;src: url(data:font/ttf;charset=utf-8;base64,AAEAAAAOAIAAAwBgR1NVQpMNggIAAAGYAAAANE9TLzKXt8F0AAACqAAAAGBTVEFU53DMLgAAAgQAAABIY21hcAEHAS8AAAJMAAAAXGdhc3AAAAAQAAAA9AAAAAhnbHlmdIPvQAAABYwAAASEaGVhZAE1nA4AAAHMAAAANmhoZWEKsQEqAAABdAAAACRobXR4B00CZgAAAPwAAAAabG9jYQZPBV0AAAEYAAAAGm1heHAAKwE6AAABNAAAACBuYW1lONRe+QAAAwgAAAKEcG9zdP9tAGUAAAFUAAAAIHByZXBoBoyFAAAA7AAAAAe4Af+FsASNAAABAAH//wAPBM0AAAAAAFEAmwC2AI8AXgC1AHYATACLAFUAAAAAAAAAAAAcAGMAfACUAQ0BSgG5AcwB/wJCAAAAAQAAAAwAsQAWAIcABQABAAAAAAAAAAAAAAAAAAMAAQADAAAAAAAA/2oAZAAAAAEAAAAAAAAAAAAAAAAAAAAAAAEAAAhi/dUAAATN/AX+hgZHAAEAAAAAAAAAAAAAAAAAAAABAAEAAAAKADIAMgAEREZMVAAeY3lybAAaZ3JlawAabGF0bgAaAAAAAAAEAAAAAP//AAAAAAABAAAAAwAAr6v1Al8PPPUACwgAAAAAAMTwES4AAAAA2tg/q/wF/dUGRwhiAAAACQACAAAAAAAAAAEAAQAIAAIAAAAUAAIAAAAkAAJ3Z2h0AQAAAGl0YWwBCwABAAQAFAADAAAAAgEOAZAAAAK8AAAAAwABAAIBEQAAAAAAAQAAAAAAAgAAAAMAAAAUAAMAAQAAABQABABIAAAADgAIAAIABgAgADIAQQBFAE4AVf//AAAAIAAyAEEARABOAFH////h/9n/wf+//7f/tQABAAAAAAAAAAAAAAAAAAAABATNAZAABQAABZoFMwAAAR8FmgUzAAAD0QBmAgAAAAAAAAkAAAAAAADgAAL/EAAgWwAAACAAAAAAR09PRwBAAA3//Qhi/dUAAAhiAisgAAGfTwEAAAQ6BbAAAAAgAAEAAAAMAJYAAwABBAkAAAC0AToAAwABBAkAAQAWASQAAwABBAkAAgAOARYAAwABBAkAAwA6ANwAAwABBAkABAAmALYAAwABBAkABQAaAJwAAwABBAkABgAkAHgAAwABBAkADgBUACQAAwABBAkBAAAMABgAAwABBAkBCwAMAAwAAwABBAkBDgAOARYAAwABBAkBEQAMAAAATgBvAHIAbQBhAGwASQB0AGEAbABpAGMAVwBlAGkAZwBoAHQAaAB0AHQAcAA6AC8ALwB3AHcAdwAuAGEAcABhAGMAaABlAC4AbwByAGcALwBsAGkAYwBlAG4AcwBlAHMALwBMAEkAQwBFAE4AUwBFAC0AMgAuADAAUgBvAGIAbwB0AG8ATQBvAG4AbwAtAFIAZQBnAHUAbABhAHIAVgBlAHIAcwBpAG8AbgAgADMALgAwADAAMABSAG8AYgBvAHQAbwAgAE0AbwBuAG8AIABSAGUAZwB1AGwAYQByADMALgAwADAAMAA7AEcATwBPAEcAOwBSAG8AYgBvAHQAbwBNAG8AbgBvAC0AUgBlAGcAdQBsAGEAcgBSAGUAZwB1AGwAYQByAFIAbwBiAG8AdABvACAATQBvAG4AbwBDAG8AcAB5AHIAaQBnAGgAdAAgADIAMAAxADUAIABUAGgAZQAgAFIAbwBiAG8AdABvACAATQBvAG4AbwAgAFAAcgBvAGoAZQBjAHQAIABBAHUAdABoAG8AcgBzACAAKABoAHQAdABwAHMAOgAvAC8AZwBpAHQAaAB1AGIALgBjAG8AbQAvAGcAbwBvAGcAbABlAGYAbwBuAHQAcwAvAHIAbwBiAG8AdABvAG0AbwBuAG8AKQACAFEAAASQBbAABwAKAAABEzMBIwEzEzcTEwNlc7j+Mpv+Krl1MsPAAXn+hwWw+lABeaECeP2IAAIAmwAABHAFsAAVACsAADMhNjY3NjY3NjY1NSYmJyYmJyYmJyEXMxYWFxYWFxYWFxUGBgcGBgcGBgcjmwFRabVIRG4kIyUBJyUpiVlAl1X+r7yVRXQvQlsbFRUBARQUF082M4NQlQEwLSt6S0isYGtksEpXhSkeIQGYAR0aI3FGNn1EbUN7NUFpJCMmAQABALYAAAQ0BbAACwAAATUhESE1IREhNSERA8/9oAK8/IsDfv07AqGdAdSe+lCdAgQAAAEAjwAABD4FsAAJAAAhESMDASMRMxMBBD67A/3LvLsDAjUFsPvCBD76UARA+8AAAAIAXv8KBIwFxAAoAE4AAAE1JiYnJiYnJiYjIgYHBgYHBgYHFRYWFxYWFxYWMzI2NwU3JzY2NzY2JxUGBgcGBgcGBiMiJicmJicmJjU1NDY3NjY3NjYzMhYXFhYXFhYEbgEaGhtTOTqVXV2VOTpSGxsaAQEaGxtUOjmUXSRDHwEgf/s6UxsaGrcBCw4PMCUlZ0VEZyUlMQ8PDQ0PDzElJWZERWclJTEPDgsCl4BQpUxMhTExOTkxMoVMTKRQgFCjTEyFMTE5CQn0edExhUxMpNOCN3c6OmgnKC8vKChoOjp3NoI2dzo5aCgnLy4nKGg5OncAAgC1AAAEcgWwABQAIwAAAQEzNwE2Njc2NjU0JicmJichETMRNREzFhYXFhYVFAYHBgYHApABHsMB/ss8ZCQkKU1DRLRm/lW480NxKSkuMCkqbj4CUv2uDAJuGkowMHZHbqM2NjYC+lACUpgCLgEkIyRpRkJlIyMlAQABAHb/7ARpBcQASQAAARQGBwYGIyImJyYmJyMWFhcWFjMyNjc2NjU0JicmJicmJicmJic0Njc2NjMyFhcWFhczJiYnJiYjIgYHBgYVFBYXFhYXFhYXFhYDqDQpKWk2RHMsLDgJvQNNQkrJaFeuRUVXUUJDolExby8wPgEvKCdlNUJpJiYuCL4CUkREsF9WqkNDU1NCQZ9NNXMwMD0BcDxXHB0bJSUkaURemTlCRjExMJJiYZQzN0cZDygeHlc/OlgeHh4pJSVnP2SiOTk/NTMzlF5eizMyRxkRKh8gXAABAEwAAASEBbAABwAAATUhFSERMxEEhPvIAcK0BRKenvruBRIAAAEAi//sBEIFsAAdAAABIwMGBgcGBiMiJicmJicDIwMWFhcWFjMyNjc2NjUEQLMDAiYkJWxHR20kJScBBLACAUY+Pq5qaK4/P0gFsPwmQXguLzc4Li54QQPa/CZms0JDTE1DQrJmAAEAVQAABCsFxAAqAAAhNSEBNjY3NjY1NCYnJiYjIgYHBgYVMzQ2NzY2MzIWFxYWFRQGBwYGBwEVBCv9JQGHN2MmJSw9OTmlZ3CvPD1AuiMkI2tJPF8iISMWGhpWQP4jlwGoPHk+Pn9BV5Q2Nj1IPT2jXERuJyYqKSMjXzYsUy4vbkf97oU=) format('truetype');}
+                  					]]>
+                </style>
+              </svg>
+            </div>
+            <div class="slogan"><span>"Knowledge is infectious."</span></div>
+            <div class="divider"></div>
+            <div class="main-paragraph">
+              <p></p>
+            </div>
+          </div>
+          <div id="about-us-main" class="main-section-item">
+            <div class="text-22">
+              <h1>Getting Started With Us</h1>
+              <div class="divider"></div>
+              <p>
+                At Student Squared, we understand that every student is unique.
+                That’s why we offer a free consultation meeting with one of our
+                representatives to match your child with the most suitable tutor
+                (exam board, learning style, current proficiency, special
+                accommodations etc.). We then offer another free consultation
+                meeting with the selected tutor(s) to discuss educational goals
+                and objectives, along with any other requests. We strive to have
+                open lines of communication from tutor to parent with regular
+                updates on the student’s progression. There will also be clear
+                and fast methods to reach a company representative to ensure any
+                requests/issues can be dealt with as quickly as possible.
+              </p>
+            </div>
+            <div class="subjects">
+              <ul>
+                <li>Maths</li>
+                <li>English</li>
+                <li>Science</li>
+                <li>Geography</li>
+                <li>History</li>
+              </ul>
+            </div>
+            <div class="text-23">
+              <h1>How We Teach</h1>
+              <div class="divider"></div>
+              <p>
+                Although the style of teaching provided is tailored to the
+                individual, Student Squared have overarching techniques that we
+                implement to maximise development. For example, our tutors do
+                not do student’s homework with them. We advise that homework
+                should be done independently, as it is set by a teacher who has
+                matched the task with their current stage of learning. Instead,
+                we prefer to go through marked homework which allows tutors to
+                identify weaknesses and then explain the correct ways to achieve
+                maximum possible marks – people learn more from failure than
+                from success. We also have a strong focus on past exam papers as
+                it builds exam confidence, identifies areas of weakness and by
+                reviewing mark schemes, students can familiarise themselves with
+                what examiners want to see. Ultimately though, our teaching
+                style is devised on a case-by-case basis to maximise individual
+                potential.
+              </p>
+            </div>
+            <div class="prices"></div>
+          </div>
+          <div id="faq-main" class="main-section-item">FAQ</div>
+          <div id="contact-us-main" class="main-section-item">
+            <h1 class="contact-title">
+              C<span class="light">ontact </span>U<span class="light">s</span>
+            </h1>
+            <div class="divider"></div>
+            <form
+              action="https://formsubmit.co/james.harvey@h2consulting.co.uk"
+              method="POST"
+            >
+              <input type="hidden" name="_captcha" value="false" />
+              <!-- <input type="hidden" name="_next" value="/thanks.html" /> -->
+              <div class="top-line">
+                <div class="input-container">
+                  <input
+                    id="first-name"
+                    name="firstname"
+                    class="input"
+                    type="text"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="firstname" class="label-name">
+                    <span class="content-name">First Name</span>
+                  </label>
+                </div>
+                <div class="input-container">
+                  <input
+                    id="last-name"
+                    name="lastname"
+                    class="input"
+                    type="text"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="lastname" class="label-name">
+                    <span class="content-name">Last Name</span>
+                  </label>
+                </div>
+              </div>
+              <div class="middle-line">
+                <div class="input-container">
+                  <input
+                    id="email"
+                    name="email"
+                    class="input"
+                    type="email"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="email" class="label-name">
+                    <span class="content-name">Email</span>
+                  </label>
+                </div>
+                <div class="input-container">
+                  <input
+                    id="tel"
+                    name="telephone"
+                    class="input"
+                    type="number"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="telephone" class="label-name">
+                    <span class="content-name">Telephone</span>
+                  </label>
+                </div>
+              </div>
+              <div class="bottom-line">
+                <div class="input-container">
+                  <input
+                    id="text-area"
+                    name="text-area"
+                    class="input"
+                    type="text"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="text-area" class="label-name">
+                    <span class="content-name">Input Enquiry</span>
+                  </label>
+                </div>
+                <div class="submit-button">
+                  <button type="submit">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div id="our-tutors-main" class="main-section-item">
+            <div class="section">
+              <div class="card">
+                <div class="img">
+                  <img src="/img/profile-1.jpg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="info-text">
+                    <h2>Name:</h2>
+                    <span> John Doe</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>University:</h2>
+                    <span> Manchester</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Subjects:</h2>
+                    <span> English, History</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Grades:</h2>
+                    <span> A* A* A*</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="img">
+                  <img src="/img/profile-2.png" alt="" />
+                </div>
+                <div class="info">
+                  <div class="info-text">
+                    <h2>Name:</h2>
+                    <span> John Doe</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>University:</h2>
+                    <span> Manchester</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Subjects:</h2>
+                    <span> English, History</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Grades:</h2>
+                    <span> A* A* A*</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="card">
+                <div class="img">
+                  <img src="/img/profile-3.png" alt="" />
+                </div>
+                <div class="info">
+                  <div class="info-text">
+                    <h2>Name:</h2>
+                    <span> John Doe</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>University:</h2>
+                    <span> Manchester</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Subjects:</h2>
+                    <span> English, History</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Grades:</h2>
+                    <span> A* A* A*</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="img">
+                  <img src="/img/profile-4.jpg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="info-text">
+                    <h2>Name:</h2>
+                    <span> John Doe</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>University:</h2>
+                    <span> Manchester</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Subjects:</h2>
+                    <span> English, History</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Grades:</h2>
+                    <span> A* A* A*</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item description-section intro-fade-in">
+        <div class="description-section-container">
+          <div id="home-description" class="description-section-item">
+            <p>
+              Our tutors are closer in age to the students they teach. When a
+              student feels like they can relate to a tutor and vice versa, it
+              promotes a more open and honest relationship. This creates a very
+              positive learning environment and allows our tutors to have a
+              greater understanding of the student. They can then cater for
+              individual needs and preferences, to help students reach their
+              full potential.<br /><br />
+              Our tutors charge lower rates than the market average, making it a
+              more affordable option for families. It also means that a student
+              could have more sessions than their peers using traditional
+              methods - for the same price.
+            </p>
+          </div>
+          <div id="about-us-description" class="description-section-item">
+            <p>
+              Our tutors are closer in age to the students they teach. When a
+              student feels like they can relate to a tutor and vice versa, it
+              promotes a more open and honest relationship. This creates a very
+              positive learning environment and allows our tutors to have a
+              greater understanding of the student. They can then cater for
+              individual needs and preferences, to help students reach their
+              full potential.<br /><br />
+              Our tutors charge lower rates than the market average, making it a
+              more affordable option for families. It also means that a student
+              could have more sessions than their peers using traditional
+              methods - for the same price.
+            </p>
+          </div>
+          <div id="faq-description" class="description-section-item">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              aspernatur commodi saepe numquam laborum est libero, quaerat
+              corrupti possimus ducimus impedit rem veniam culpa aliquam quos
+              nam labore nemo temporibus eligendi incidunt magni hic? Dolor,
+              maiores ut. Vel tempora aliquam impedit eaque reiciendis illum
+              officia quo non at deleniti quod nam, amet enim saepe maxime cum
+              provident hic fugit placeat a doloremque earum recusandae! Ullam,
+              et fugiat ratione quasi neque praesentium esse? Atque aliquid
+              voluptatem labore natus tempora sint voluptatibus possimus
+              voluptate porro laudantium fuga aut, nostrum dicta suscipit fugit.
+              Ut quia fuga earum non, quod corrupti tempore porro ducimus! Non,
+              maiores quis! Eos, accusantium velit. Nihil asperiores, quam
+              nostrum blanditiis illum dolorem debitis magni facere voluptate id
+              voluptatibus atque unde iste totam harum molestias officia
+              eligendi assumenda soluta, natus eos repellendus laudantium?
+              Reprehenderit doloribus necessitatibus consectetur magnam. Beatae
+              dicta voluptas tenetur laudantium perspiciatis minima quo numquam
+              sed voluptatem eaque?
+            </p>
+          </div>
+          <div id="contact-us-description" class="description-section-item">
+            <div class="details-section">
+              <div id="phone">
+                <ion-icon name="call-outline"></ion-icon
+                ><span class="contact-description-item">+44 7375660599</span>
+              </div>
+              <div id="email">
+                <ion-icon name="mail-sharp"></ion-icon
+                ><span class="contact-description-item"
+                  >enquiries@stuentsquared.com</span
+                >
+              </div>
+            </div>
+          </div>
+          <div id="our-tutors-description" class="description-section-item">
+            <p>
+              Our tutors have a current understanding of the material and the
+              way it’s being taught in the classroom. They also remember how it
+              felt to not know the subject, and the steps they took to learn and
+              then go on to excel in their subject. This makes it easier for
+              them to explain the content in a way that is understandable and
+              relevant to the student.<br /><br />Our tutors have recently taken
+              the exams they’re teaching. Not just can they share subject
+              knowledge with students, but methods and strategies to convert
+              that knowledge into the maximum marks achievable.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item navigation intro-fade-in">
+        <nav id="menu">
+          <div id="menu-items">
+            <span id="home-button" class="menu-item active">Home</span>
+            <span id="about-us-button" class="menu-item">About Us</span>
+            <span id="faq-button" class="menu-item">FAQ</span>
+            <span id="contact-us-button" class="menu-item">Contact Us</span>
+            <span id="our-tutors-button" class="menu-item">Our Tutors</span>
+          </div>
+        </nav>
+      </div>
+      <div class="grid-item arrows intro-fade-in">
+        <div class="left-arrow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="butt"
+              stroke-miterlimit="10"
+              stroke-width="3"
+              d="M328 112L184 256l144 144"
+            />
+          </svg>
+        </div>
+        <div class="right-arrow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="butt"
+              stroke-miterlimit="10"
+              stroke-width="3"
+              d="M184 112l144 144-144 144"
+            />
+          </svg>
+        </div>
+      </div>
+    </main>
+    <div class="mobile">
+      <div class="main-sections-mobile">
+        <div class="mobile-section-container">
+          <div id="home-main-mobile" class="main-section-item-mobile">
+            <div class="title">
+              <div class="typewriter">
+                <h1 class="typewriter-text">
+                  S<span class="light">tudent </span>S<span class="light"
+                    >quared</span
+                  >
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div id="faq-main-mobile" class="main-section-item-mobile">FAQ</div>
+          <div id="contact-us-main-mobile" class="main-section-item-mobile">
+            <h1 class="contact-title">
+              C<span class="light">ontact </span>U<span class="light">s</span>
+            </h1>
+            <div class="divider"></div>
+            <form
+              action="https://formsubmit.co/james.harvey@h2consulting.co.uk"
+              method="POST"
+            >
+              <input type="hidden" name="_captcha" value="false" />
+              <!-- <input type="hidden" name="_next" value="/thanks.html" /> -->
+              <div class="top-line">
+                <div class="input-container">
+                  <input
+                    id="first-name"
+                    name="firstname"
+                    class="input"
+                    type="text"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="firstname" class="label-name">
+                    <span class="content-name">First Name</span>
+                  </label>
+                </div>
+                <div class="input-container">
+                  <input
+                    id="last-name"
+                    name="lastname"
+                    class="input"
+                    type="text"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="lastname" class="label-name">
+                    <span class="content-name">Last Name</span>
+                  </label>
+                </div>
+              </div>
+              <div class="middle-line">
+                <div class="input-container">
+                  <input
+                    id="email"
+                    name="email"
+                    class="input"
+                    type="email"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="email" class="label-name">
+                    <span class="content-name">Email</span>
+                  </label>
+                </div>
+                <div class="input-container">
+                  <input
+                    id="tel"
+                    name="telephone"
+                    class="input"
+                    type="number"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="telephone" class="label-name">
+                    <span class="content-name">Telephone</span>
+                  </label>
+                </div>
+              </div>
+              <div class="bottom-line">
+                <div class="input-container">
+                  <input
+                    id="text-area"
+                    name="text-area"
+                    class="input"
+                    type="text"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="text-area" class="label-name">
+                    <span class="content-name">Input Enquiry</span>
+                  </label>
+                </div>
+                <div class="submit-button">
+                  <button type="submit">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div id="our-tutors-main-mobile" class="main-section-item-mobile">
+            <div class="section">
+              <div class="card">
+                <div class="img">
+                  <img src="/img/profile-1.jpg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="info-text">
+                    <h2>Name:</h2>
+                    <span> John Doe</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>University:</h2>
+                    <span> Manchester</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Subjects:</h2>
+                    <span> English, History</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Grades:</h2>
+                    <span> A* A* A*</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="img">
+                  <img src="/img/profile-2.png" alt="" />
+                </div>
+                <div class="info">
+                  <div class="info-text">
+                    <h2>Name:</h2>
+                    <span> John Doe</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>University:</h2>
+                    <span> Manchester</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Subjects:</h2>
+                    <span> English, History</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Grades:</h2>
+                    <span> A* A* A*</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="card">
+                <div class="img">
+                  <img src="/img/profile-3.png" alt="" />
+                </div>
+                <div class="info">
+                  <div class="info-text">
+                    <h2>Name:</h2>
+                    <span> John Doe</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>University:</h2>
+                    <span> Manchester</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Subjects:</h2>
+                    <span> English, History</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Grades:</h2>
+                    <span> A* A* A*</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="img">
+                  <img src="/img/profile-4.jpg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="info-text">
+                    <h2>Name:</h2>
+                    <span> John Doe</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>University:</h2>
+                    <span> Manchester</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Subjects:</h2>
+                    <span> English, History</span>
+                  </div>
+                  <div class="info-text">
+                    <h2>Grades:</h2>
+                    <span> A* A* A*</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav intro-fade-in">
+        <div
+          class="home-mobile-nav mobile-nav active-mobile"
+          id="home-button-mobile"
+        >
+          <ion-icon name="home-sharp"></ion-icon><span>Home</span>
+        </div>
+        <div class="faq-mobile-nav mobile-nav" id="faq-button-mobile">
+          <ion-icon name="help-circle"></ion-icon><span>FAQ</span>
+        </div>
+        <div
+          class="contact-us-mobile-nav mobile-nav"
+          id="contact-us-button-mobile"
+        >
+          <ion-icon name="call-sharp"></ion-icon><span>Contact Us</span>
+        </div>
+        <div
+          class="our-tutors-mobile-nav mobile-nav"
+          id="our-tutors-button-mobile"
+        >
+          <ion-icon name="person-sharp"></ion-icon><span>Our Tutors</span>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+      integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>

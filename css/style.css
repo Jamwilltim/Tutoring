@@ -471,6 +471,9 @@ main {
   font-size: 12px;
   padding: 20px;
 }
+.description-section .description-section-container #home-description {
+  font-size: 16px;
+}
 .description-section .description-section-container #about-us-description {
   display: flex;
   flex-direction: column;
@@ -507,8 +510,8 @@ main {
   font-size: 40px;
   padding-right: 10px;
 }
-.description-section .description-section-container #contact-us-description .details-section contact-description-item {
-  font-size: 25px;
+.description-section .description-section-container #contact-us-description .details-section .contact-description-item {
+  font-size: 19px;
 }
 .description-section .description-section-container #contact-us-description .details-section div {
   display: flex;

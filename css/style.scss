@@ -264,7 +264,9 @@ main {
 		}
 
 		#faq-main {
-			display: block;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 
 			.faq-title-wrapper {
 				display: flex;
@@ -273,14 +275,35 @@ main {
 				text-align: center;
 				align-items: center;
 				width: 100%;
-				font-size: 50px;
+				font-size: 1em;
 				height: 25%;
 				color: $font-color;
 				letter-spacing: 0.15em;
 				font-family: "Montserrat", sans-serif;
 
 				h1 {
-					padding-bottom: 10px;
+					padding-bottom: 1%;
+				}
+			}
+
+			span {
+				padding-bottom: 10px;
+				font-family: "Poppins", sans-serif;
+				width: 80%;
+			}
+
+			.bullets {
+				text-align: left;
+				width: 65%;
+				font-family: "Poppins", sans-serif;
+				font-size: 1em;
+
+				li {
+					padding-bottom: 3%;
+				}
+
+				.heavy {
+					font-weight: bold;
 				}
 			}
 		}

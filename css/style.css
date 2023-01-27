@@ -224,7 +224,9 @@ main {
   padding-top: 5px;
 }
 .main-section .main-section-container #faq-main {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .main-section .main-section-container #faq-main .faq-title-wrapper {
   display: flex;
@@ -233,14 +235,31 @@ main {
   text-align: center;
   align-items: center;
   width: 100%;
-  font-size: 50px;
+  font-size: 1em;
   height: 25%;
   color: #e9e9e9;
   letter-spacing: 0.15em;
   font-family: "Montserrat", sans-serif;
 }
 .main-section .main-section-container #faq-main .faq-title-wrapper h1 {
+  padding-bottom: 1%;
+}
+.main-section .main-section-container #faq-main span {
   padding-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  width: 80%;
+}
+.main-section .main-section-container #faq-main .bullets {
+  text-align: left;
+  width: 65%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+}
+.main-section .main-section-container #faq-main .bullets li {
+  padding-bottom: 3%;
+}
+.main-section .main-section-container #faq-main .bullets .heavy {
+  font-weight: bold;
 }
 .main-section .main-section-container #contact-us-main {
   display: flex;

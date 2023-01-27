@@ -8,13 +8,13 @@ $gold-2: #b5965d;
 $gold-3: #cdcdc3;
 $border-color: rgb(75, 75, 75);
 
-@media (min-width: 1350px) {
-	.description-section-item p {
-		font-size: 15px;
-	}
-}
+// @media (min-width: 1350px) {
+// 	.description-section-item p {
+// 		font-size: 15px;
+// 	}
+// }
 
-@media (max-width: 1320px) {
+@media (max-width: 1424px) {
 	main {
 		display: none;
 	}
@@ -33,7 +33,7 @@ $border-color: rgb(75, 75, 75);
 
 		.nav {
 			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 			grid-template-rows: 1fr;
 			place-items: center;
 
@@ -46,6 +46,7 @@ $border-color: rgb(75, 75, 75);
 				align-items: center;
 				width: 100%;
 				transition: all 0.3s ease;
+				text-align: center;
 
 				ion-icon {
 					font-size: 20px;
@@ -72,6 +73,41 @@ $border-color: rgb(75, 75, 75);
 				display: grid;
 				place-items: center;
 				z-index: 0;
+			}
+
+			#home-main-mobile {
+				background-image: url("/img/home-page-background.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				display: flex;
+				justify-content: space-around;
+				flex-direction: column;
+				align-items: center;
+				.divider {
+					height: 3px;
+					width: 30%;
+					background-color: $blue-1;
+				}
+				.logo-main {
+					width: 75%;
+				}
+				.slogan {
+					span {
+						font-family: "Ariel", sans-serif;
+						font-style: italic;
+						font-size: 25px;
+					}
+				}
+				.main-paragraph {
+					width: 80%;
+					line-height: 40px;
+					text-align: center;
+					height: 40%;
+				}
+
+				p {
+					font-family: "Montserrat", sans-serif;
+				}
 			}
 
 			#contact-us-main-mobile {
@@ -307,17 +343,9 @@ $border-color: rgb(75, 75, 75);
 @media (max-width: 794px) {
 	.mobile {
 		#home-main-mobile {
-			.title {
-				display: grid;
-				place-items: center;
-			}
-			.typewriter {
-				display: grid;
-				place-items: center;
-				width: 65%;
-				h1.typewriter-text {
-					overflow: hidden;
-					white-space: normal;
+			.main-paragraph {
+				p {
+					line-height: 25px;
 				}
 			}
 		}

@@ -522,7 +522,6 @@ main {
 .navigation {
   background-color: rgba(255, 255, 255, 0.0588235294);
   border-left: 1px solid rgb(75, 75, 75);
-  z-index: 1;
   grid-column: 3/4;
   grid-row: 1/2;
 }
@@ -569,7 +568,6 @@ main {
 .arrows {
   border-top: 1px solid rgb(75, 75, 75);
   border-left: 1px solid rgb(75, 75, 75);
-  z-index: 1;
   grid-column: 3/4;
   grid-row: 2/3;
   display: inline-flex;
@@ -603,20 +601,65 @@ main {
   border-right: 1px solid rgb(75, 75, 75);
 }
 
-.typewriter {
-  z-index: 3;
+.intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f1f2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.typewriter h1 {
-  font-size: 6rem;
+
+.intro-text {
+  text-transform: uppercase;
   color: #e9e9e9;
-  font-family: "Roboto Mono", monospace;
-  overflow: hidden;
-  border-right: 5px solid #e9e9e9;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: 0.15em;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 3rem;
 }
-.typewriter .light {
-  font-weight: 200;
-  font-size: 3rem;
+
+.divider-intro {
+  background-color: #e9e9e9;
+  width: 11vw;
+  height: 2px;
+  margin-bottom: 2vh;
+}
+
+.description-text {
+  margin-right: -3rem;
+}
+
+#logo-text {
+  margin-right: -0.8rem;
+  font-size: 6rem;
+  letter-spacing: 0.8rem;
+  font-family: "Alexandria", sans-serif;
+}
+
+.superscript {
+  font-size: 3.2rem;
+}
+
+.slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(97, 105, 109);
+  transform: translateY(100%);
+}
+
+.hide {
+  background-color: #0f1f2f;
+  overflow: hidden;
+}
+
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
 }/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,12 @@
 @media (max-width: 1424px) {
+  body {
+    min-height: 100vh;
+  }
+  html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
   main {
     display: none;
   }
@@ -6,6 +14,7 @@
     background-color: rgba(136, 136, 136, 0.0823529412);
   }
   .mobile {
+    overflow-y: scroll;
     font-family: "Roboto Mono", monospace;
     height: 100%;
     width: 100%;
@@ -219,15 +228,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-  }
-  .mobile .mobile-section-container #our-tutors-main-mobile .section {
-    width: 80%;
-    height: 50%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    overflow-y: scroll;
+    height: 100%;
   }
   .mobile .mobile-section-container #our-tutors-main-mobile .card {
     background: linear-gradient(to right, #cc922f 4px, transparent 4px) 0 0, linear-gradient(to right, #cc922f 4px, transparent 4px) 0 100%, linear-gradient(to left, #cc922f 4px, transparent 4px) 100% 0, linear-gradient(to left, #cc922f 4px, transparent 4px) 100% 100%, linear-gradient(to bottom, #cc922f 4px, transparent 4px) 0 0, linear-gradient(to bottom, #cc922f 4px, transparent 4px) 100% 0, linear-gradient(to top, #cc922f 4px, transparent 4px) 0 100%, linear-gradient(to top, #cc922f 4px, transparent 4px) 100% 100%;
@@ -237,9 +240,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 45%;
-    height: 60%;
-    overflow: hidden;
+    width: 50%;
+    height: 250px;
   }
   .mobile .mobile-section-container #our-tutors-main-mobile .card .img {
     overflow: hidden;
@@ -265,5 +267,25 @@
 @media (max-width: 794px) {
   .mobile #home-main-mobile .main-paragraph p {
     line-height: 25px;
+  }
+}
+@media (max-width: 550px) {
+  .mobile .nav .mobile-nav span {
+    display: none;
+  }
+  .mobile .main-sections-mobile .mobile-section-container #home-main-mobile {
+    overflow-y: scroll;
+  }
+  .mobile .main-sections-mobile .mobile-section-container #home-main-mobile .slogan span {
+    font-size: 14px;
+  }
+  .mobile .main-sections-mobile .mobile-section-container #home-main-mobile .main-paragraph {
+    padding: 0;
+  }
+  .mobile .main-sections-mobile .mobile-section-container #home-main-mobile .main-paragraph p {
+    font-size: 13px;
+  }
+  .mobile .main-sections-mobile .mobile-section-container #our-tutors-main-mobile .card {
+    width: 100%;
   }
 }/*# sourceMappingURL=variable-sizing.css.map */

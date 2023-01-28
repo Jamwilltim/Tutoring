@@ -8,13 +8,16 @@ $gold-2: #b5965d;
 $gold-3: #cdcdc3;
 $border-color: rgb(75, 75, 75);
 
-// @media (min-width: 1350px) {
-// 	.description-section-item p {
-// 		font-size: 15px;
-// 	}
-// }
-
 @media (max-width: 1424px) {
+	body {
+		min-height: 100vh;
+	}
+	html {
+		overflow-y: scroll;
+		overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
+	}
+
 	main {
 		display: none;
 	}
@@ -24,6 +27,7 @@ $border-color: rgb(75, 75, 75);
 	}
 
 	.mobile {
+		overflow-y: scroll;
 		font-family: "Roboto Mono", monospace;
 		height: 100%;
 		width: 100%;
@@ -282,16 +286,9 @@ $border-color: rgb(75, 75, 75);
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				justify-content: center;
-
-				.section {
-					width: 80%;
-					height: 50%;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: space-between;
-				}
+				justify-content: space-between;
+				overflow-y: scroll;
+				height: 100%;
 
 				.card {
 					background: linear-gradient(to right, $gold-1 4px, transparent 4px) 0 0,
@@ -307,9 +304,8 @@ $border-color: rgb(75, 75, 75);
 					display: flex;
 					flex-direction: row;
 					justify-content: space-between;
-					width: 45%;
-					height: 60%;
-					overflow: hidden;
+					width: 50%;
+					height: 250px;
 
 					.img {
 						overflow: hidden;
@@ -346,6 +342,41 @@ $border-color: rgb(75, 75, 75);
 			.main-paragraph {
 				p {
 					line-height: 25px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 550px) {
+	.mobile {
+		.nav {
+			.mobile-nav {
+				span {
+					display: none;
+				}
+			}
+		}
+		.main-sections-mobile {
+			.mobile-section-container {
+				#home-main-mobile {
+					overflow-y: scroll;
+					.slogan {
+						span {
+							font-size: 14px;
+						}
+					}
+					.main-paragraph {
+						padding: 0;
+						p {
+							font-size: 13px;
+						}
+					}
+				}
+				#our-tutors-main-mobile {
+					.card {
+						width: 100%;
+					}
 				}
 			}
 		}

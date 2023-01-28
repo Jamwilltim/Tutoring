@@ -24,7 +24,15 @@ gsap.set(mainSectionsMobile[0], { xPercent: 0 });
 gsap.set(descriptionSections, { xPercent: 100 });
 gsap.set(descriptionSections[0], { xPercent: 0 });
 
-function introAnimation() {}
+function introAnimation() {
+	const timeline = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+	timeline.to("#logo-text", { y: "0%", duration: 0.8 });
+	timeline.fromTo(".divider-intro", { width: 0 }, { width: 180, duration: 0.2 }, "-=0.3");
+	timeline.to(".text-intro", { y: "0%", duration: 0.8, stagger: 0.2 });
+	timeline.to(".slider", { y: "-100%", duration: 1.5, delay: 0.4 });
+	timeline.to(".intro", { y: "-100%", duration: 1 }, "-=1");
+}
 
 $(".menu-item").click(function () {
 	$(".menu-item").removeClass("active");

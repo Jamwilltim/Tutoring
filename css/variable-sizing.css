@@ -3,9 +3,15 @@
     min-height: 100vh;
   }
   html {
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
+  }
+  html::-webkit-scrollbar {
+    display: none;
+  }
+  html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   main {
     display: none;
@@ -14,7 +20,6 @@
     background-color: rgba(136, 136, 136, 0.0823529412);
   }
   .mobile {
-    overflow-y: scroll;
     font-family: "Roboto Mono", monospace;
     height: 100%;
     width: 100%;
@@ -92,6 +97,112 @@
   .mobile .mobile-section-container #home-main-mobile p {
     font-family: "Montserrat", sans-serif;
   }
+  .mobile .mobile-section-container #about-us-main-mobile {
+    padding: 15px;
+  }
+  .mobile .mobile-section-container #about-us-main-mobile .divider {
+    height: 3px;
+    width: 45%;
+    background-color: #1e3957;
+    margin-bottom: 10px;
+  }
+  .mobile .mobile-section-container #about-us-main-mobile .text-23 h1,
+.mobile .mobile-section-container #about-us-main-mobile .text-22 h1 {
+    font-size: 23px;
+  }
+  .mobile .mobile-section-container #about-us-main-mobile .text-23 p,
+.mobile .mobile-section-container #about-us-main-mobile .text-22 p {
+    font-size: 11px;
+  }
+  .mobile .mobile-section-container #about-us-main-mobile .prices {
+    width: 100%;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .mobile .mobile-section-container #about-us-main-mobile .prices .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .mobile .mobile-section-container #about-us-main-mobile .prices .price-number {
+    color: #1e3957;
+    display: flex;
+    align-items: center;
+  }
+  .mobile .mobile-section-container #about-us-main-mobile .prices .price-number .white {
+    color: #e9e9e9;
+  }
+  .mobile .mobile-section-container #about-us-main-mobile .prices .price-number .smaller {
+    font-size: medium;
+    padding-top: 2px;
+  }
+  .mobile .mobile-section-container #about-us-main-mobile .prices .uni-pricing {
+    text-align: center;
+    padding-top: 10px;
+  }
+  .mobile .mobile-section-container #faq-main-mobile {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobile .mobile-section-container #faq-main-mobile .faq-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1em;
+    height: 25%;
+    color: #e9e9e9;
+    letter-spacing: 0.15em;
+    font-family: "Montserrat", sans-serif;
+  }
+  .mobile .mobile-section-container #faq-main-mobile .faq-title-wrapper .divider {
+    width: 40%;
+    height: 3px;
+    background-color: #1e3957;
+    margin-bottom: 10px;
+  }
+  .mobile .mobile-section-container #faq-main-mobile .faq-title-wrapper h1 {
+    padding-bottom: 1%;
+  }
+  .mobile .mobile-section-container #faq-main-mobile span {
+    padding-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+    width: 80%;
+  }
+  .mobile .mobile-section-container #faq-main-mobile .bullets {
+    text-align: left;
+    width: 100%;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+  }
+  .mobile .mobile-section-container #faq-main-mobile .bullets li {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 10px;
+    background-color: #0f1f2f;
+    padding-bottom: 3%;
+  }
+  .mobile .mobile-section-container #faq-main-mobile .bullets li:nth-child(1) {
+    background-color: #0a2749;
+  }
+  .mobile .mobile-section-container #faq-main-mobile .bullets li:nth-child(3) {
+    background-color: #0a2749;
+  }
+  .mobile .mobile-section-container #faq-main-mobile .bullets li:nth-child(5) {
+    background-color: #0a2749;
+  }
+  .mobile .mobile-section-container #faq-main-mobile .bullets .heavy {
+    font-weight: bold;
+  }
   .mobile .mobile-section-container #contact-us-main-mobile {
     display: flex;
     flex-direction: column;
@@ -101,10 +212,15 @@
   }
   .mobile .mobile-section-container #contact-us-main-mobile .contact-title {
     padding-bottom: 2%;
-    font-size: 6rem;
+    font-size: 50px;
     color: #e9e9e9;
     margin: 0 auto;
     letter-spacing: 0.15em;
+  }
+  .mobile .mobile-section-container #contact-us-main-mobile .divider {
+    width: 30%;
+    height: 3px;
+    background-color: #cc922f;
   }
   .mobile .mobile-section-container #contact-us-main-mobile .light {
     font-weight: 200;
@@ -270,6 +386,12 @@
   }
 }
 @media (max-width: 550px) {
+  html {
+    overflow-y: scroll;
+  }
+  .mobile {
+    overflow-y: scroll;
+  }
   .mobile .nav .mobile-nav span {
     display: none;
   }
@@ -284,6 +406,15 @@
   }
   .mobile .main-sections-mobile .mobile-section-container #home-main-mobile .main-paragraph p {
     font-size: 13px;
+  }
+  .mobile .main-sections-mobile .mobile-section-container #about-us-main-mobile {
+    overflow-y: scroll;
+  }
+  .mobile .main-sections-mobile .mobile-section-container #faq-main-mobile {
+    overflow-y: scroll;
+  }
+  .mobile .main-sections-mobile .mobile-section-container #contact-us-main-mobile .contact-title {
+    font-size: 30px;
   }
   .mobile .main-sections-mobile .mobile-section-container #our-tutors-main-mobile .card {
     width: 100%;

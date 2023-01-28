@@ -13,9 +13,17 @@ $border-color: rgb(75, 75, 75);
 		min-height: 100vh;
 	}
 	html {
-		overflow-y: scroll;
-		overflow-x: hidden;
+		overflow: hidden;
 		-webkit-overflow-scrolling: touch;
+	}
+
+	html::-webkit-scrollbar {
+		display: none;
+	}
+
+	html {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
 	}
 
 	main {
@@ -27,7 +35,6 @@ $border-color: rgb(75, 75, 75);
 	}
 
 	.mobile {
-		overflow-y: scroll;
 		font-family: "Roboto Mono", monospace;
 		height: 100%;
 		width: 100%;
@@ -114,6 +121,129 @@ $border-color: rgb(75, 75, 75);
 				}
 			}
 
+			#about-us-main-mobile {
+				padding: 15px;
+
+				.divider {
+					height: 3px;
+					width: 45%;
+					background-color: $blue-1;
+					margin-bottom: 10px;
+				}
+
+				.text-23,
+				.text-22 {
+					h1 {
+						font-size: 23px;
+					}
+					p {
+						font-size: 11px;
+					}
+				}
+
+				.prices {
+					.header-wrapper {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						width: 100%;
+					}
+					width: 100%;
+					font-size: medium;
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					justify-content: space-between;
+
+					.price-number {
+						.white {
+							color: $font-color;
+						}
+						.smaller {
+							font-size: medium;
+							padding-top: 2px;
+						}
+						color: $blue-1;
+						display: flex;
+						align-items: center;
+					}
+
+					.uni-pricing {
+						text-align: center;
+						padding-top: 10px;
+					}
+				}
+			}
+
+			#faq-main-mobile {
+				overflow-y: scroll;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				.faq-title-wrapper {
+					.divider {
+						width: 40%;
+						height: 3px;
+						background-color: $blue-1;
+						margin-bottom: 10px;
+					}
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					text-align: center;
+					align-items: center;
+					width: 100%;
+					font-size: 1em;
+					height: 25%;
+					color: $font-color;
+					letter-spacing: 0.15em;
+					font-family: "Montserrat", sans-serif;
+
+					h1 {
+						padding-bottom: 1%;
+					}
+				}
+
+				span {
+					padding-bottom: 10px;
+					font-family: "Poppins", sans-serif;
+					width: 80%;
+				}
+
+				.bullets {
+					text-align: left;
+					width: 100%;
+					list-style: none;
+					font-family: "Poppins", sans-serif;
+					font-size: 1em;
+
+					li {
+						padding-left: 15%;
+						padding-right: 15%;
+						padding-top: 10px;
+						background-color: $blue-3;
+						padding-bottom: 3%;
+					}
+
+					li:nth-child(1) {
+						background-color: $blue-2;
+					}
+
+					li:nth-child(3) {
+						background-color: $blue-2;
+					}
+
+					li:nth-child(5) {
+						background-color: $blue-2;
+					}
+
+					.heavy {
+						font-weight: bold;
+					}
+				}
+			}
+
 			#contact-us-main-mobile {
 				display: flex;
 				flex-direction: column;
@@ -123,10 +253,16 @@ $border-color: rgb(75, 75, 75);
 
 				.contact-title {
 					padding-bottom: 2%;
-					font-size: 6rem;
+					font-size: 50px;
 					color: $font-color;
 					margin: 0 auto;
 					letter-spacing: 0.15em;
+				}
+
+				.divider {
+					width: 30%;
+					height: 3px;
+					background-color: $gold-1;
 				}
 
 				.light {
@@ -349,7 +485,11 @@ $border-color: rgb(75, 75, 75);
 }
 
 @media (max-width: 550px) {
+	html {
+		overflow-y: scroll;
+	}
 	.mobile {
+		overflow-y: scroll;
 		.nav {
 			.mobile-nav {
 				span {
@@ -371,6 +511,20 @@ $border-color: rgb(75, 75, 75);
 						p {
 							font-size: 13px;
 						}
+					}
+				}
+
+				#about-us-main-mobile {
+					overflow-y: scroll;
+				}
+
+				#faq-main-mobile {
+					overflow-y: scroll;
+				}
+
+				#contact-us-main-mobile {
+					.contact-title {
+						font-size: 30px;
 					}
 				}
 				#our-tutors-main-mobile {

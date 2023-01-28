@@ -1,6 +1,7 @@
 introAnimation();
 
 let count = 0;
+let oldCount = 0;
 
 const sectionIds = ["#home-button", "#about-us-button", "#faq-button", "#contact-us-button", "#our-tutors-button"];
 const sectionIdsMobile = [
@@ -37,30 +38,42 @@ function introAnimation() {
 $(".menu-item").click(function () {
 	$(".menu-item").removeClass("active");
 	$(this).addClass("active");
-	let oldCount = count;
+	oldCount = count;
 	count = compareIds();
 	if (oldCount > count) {
 		gsap.fromTo(mainSections[count], { xPercent: -100 }, { xPercent: 0, duration: 1.2, ease: "power1.out" });
 		gsap.fromTo(mainSections[oldCount], { xPercent: 0 }, { duration: 1.2, xPercent: 100, ease: "power1.out" });
 		gsap.fromTo(descriptionSections[oldCount], { xPercent: 0 }, { duration: 1.2, xPercent: 100, ease: "power1.out" });
 		gsap.fromTo(descriptionSections[count], { xPercent: -100 }, { xPercent: 0, duration: 1.2, ease: "power1.out" });
+		gsap.fromTo(mainSectionsMobile[count], { xPercent: -100 }, { xPercent: 0, duration: 1.2, ease: "power1.out" });
+		gsap.fromTo(mainSectionsMobile[oldCount], { xPercent: 0 }, { duration: 1.2, xPercent: 100, ease: "power1.out" });
 	} else if (oldCount < count) {
 		gsap.fromTo(mainSections[oldCount], { xPercent: 0 }, { duration: 1.2, xPercent: -100, ease: "power1.out" });
 		gsap.fromTo(mainSections[count], { xPercent: 100 }, { duration: 1.2, xPercent: 0, ease: "power1.out" });
 		gsap.fromTo(descriptionSections[count], { xPercent: 100 }, { duration: 1.2, xPercent: 0, ease: "power1.out" });
 		gsap.fromTo(descriptionSections[oldCount], { xPercent: 0 }, { duration: 1.2, xPercent: -100, ease: "power1.out" });
+		gsap.fromTo(mainSectionsMobile[oldCount], { xPercent: 0 }, { duration: 1.2, xPercent: -100, ease: "power1.out" });
+		gsap.fromTo(mainSectionsMobile[count], { xPercent: 100 }, { duration: 1.2, xPercent: 0, ease: "power1.out" });
 	}
 });
 
 $(".mobile-nav").click(function () {
 	$(".mobile-nav").removeClass("active-mobile");
 	$(this).addClass("active-mobile");
-	let oldCount = count;
+	oldCount = count;
 	count = compareIdsMobile();
 	if (oldCount > count) {
+		gsap.fromTo(mainSections[count], { xPercent: -100 }, { xPercent: 0, duration: 1.2, ease: "power1.out" });
+		gsap.fromTo(mainSections[oldCount], { xPercent: 0 }, { duration: 1.2, xPercent: 100, ease: "power1.out" });
+		gsap.fromTo(descriptionSections[oldCount], { xPercent: 0 }, { duration: 1.2, xPercent: 100, ease: "power1.out" });
+		gsap.fromTo(descriptionSections[count], { xPercent: -100 }, { xPercent: 0, duration: 1.2, ease: "power1.out" });
 		gsap.fromTo(mainSectionsMobile[count], { xPercent: -100 }, { xPercent: 0, duration: 1.2, ease: "power1.out" });
 		gsap.fromTo(mainSectionsMobile[oldCount], { xPercent: 0 }, { duration: 1.2, xPercent: 100, ease: "power1.out" });
 	} else if (oldCount < count) {
+		gsap.fromTo(mainSections[oldCount], { xPercent: 0 }, { duration: 1.2, xPercent: -100, ease: "power1.out" });
+		gsap.fromTo(mainSections[count], { xPercent: 100 }, { duration: 1.2, xPercent: 0, ease: "power1.out" });
+		gsap.fromTo(descriptionSections[count], { xPercent: 100 }, { duration: 1.2, xPercent: 0, ease: "power1.out" });
+		gsap.fromTo(descriptionSections[oldCount], { xPercent: 0 }, { duration: 1.2, xPercent: -100, ease: "power1.out" });
 		gsap.fromTo(mainSectionsMobile[oldCount], { xPercent: 0 }, { duration: 1.2, xPercent: -100, ease: "power1.out" });
 		gsap.fromTo(mainSectionsMobile[count], { xPercent: 100 }, { duration: 1.2, xPercent: 0, ease: "power1.out" });
 	}
